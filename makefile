@@ -1,7 +1,7 @@
 CC = /usr/bin/gcc-7
 CFLAGS = -Wall -g -O2 -Werror -std=gnu99 -Wno-unused-function
 
-TARGET_HARDWARE = ./bin/test_hardware
+BIN_HARDWARE = ./bin/test_hardware
 
 SRC_DIR = ./src
 
@@ -17,8 +17,8 @@ TEST_HARDWARE = $(SRC_DIR)/tests/test_hardware.c
 
 .PHONY:hardware
 hardware:
-	$(CC) $(CFLAGS) -I$(SRC_DIR) $(COMMON) $(CPU) $(MEMORY) $(TEST_HARDWARE) -o $(TARGET_HARDWARE)
-	./$(TARGET_HARDWARE)
+	$(CC) $(CFLAGS) -I$(SRC_DIR) $(COMMON) $(CPU) $(MEMORY) $(TEST_HARDWARE) -o $(BIN_HARDWARE)
+	./$(BIN_HARDWARE)
 
 clean:
-	rm -f *.o *~ $(TARGET_HARDWARE)
+	rm -f *.o *~ $(BIN_HARDWARE)
