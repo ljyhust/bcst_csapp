@@ -8,11 +8,11 @@
  * without yangminz's permission.
  */
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<stdint.h>
-#include<string.h>
-#include<headers/common.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <string.h>
+#include "headers/common.h"
 
 // covert string to int64_t
 uint64_t string2uint(const char *str)
@@ -31,7 +31,7 @@ uint64_t string2uint_range(const char *str, int start, int end)
 
     // DFA: deterministic finite automata to scan string and get value
     int state = 0;
-    
+
     for (int i = start; i <= end; ++ i)
     {
         char c = str[i];
